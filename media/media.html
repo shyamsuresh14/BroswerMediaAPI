@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            UserMediaCheck
+        </title>
+    </head>
+    <body>
+        <video></video>
+        <script>
+            window.onload = function(){
+                var constraints = {audio:true, video: true};
+                navigator.mediaDevices.getUserMedia(constraints).then(function(){
+                    var vid = document.querySelector('video');
+                    vid.srcObject = MediaStream;
+                    vid.play(); 
+                }).catch(function(err){
+                    console.log("Error encountered" + err.message);
+                });
+            }
+        </script>
+    </body>
+</html>
