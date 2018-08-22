@@ -1,2 +1,2 @@
-# BroswerMediaAPI
+# BrowserMediaAPI
 Using the browser's media APIs to acquire inputs from the user
