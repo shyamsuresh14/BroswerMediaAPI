@@ -15,5 +15,5 @@ const httpsOptions = {
 }
 
 https.createServer(httpsOptions, app).listen(port, function (){
-    console.log('Sevrer is serving $(DirToServer)/ directory at https://locahost:$(port)')
+    console.log('Server is serving at https://locahost:3000')
 })
