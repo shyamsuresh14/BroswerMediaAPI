@@ -5,10 +5,22 @@
         <title>
             UserMediaCheck
         </title>
+        <style>
+            .vbox{
+                width: 400px;
+                background: #aaaaaa;
+                border: 2px solid black;
+                margin: 0 auto;
+            }
+        </style>
     </head>
     <body>
-        <video></video>
-        <script>
+        <div class="vbox">
+            <p>Video</p>
+            <!--<video></video>-->
+        </div>
+        
+        <!--<script>
             window.onload = function(){
                 var constraints = {audio:true, video: true};
                 navigator.mediaDevices.getUserMedia(constraints).then(function(){
@@ -19,6 +31,6 @@
                     console.log("Error encountered" + err.message);
                 });
             }
-        </script>
+        </script>-->
     </body>
 </html>
