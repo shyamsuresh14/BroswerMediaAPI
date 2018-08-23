@@ -7,30 +7,40 @@
         </title>
         <style>
             .vbox{
-                width: 400px;
+                width: 700px;
+                height: 600px;
                 background: #aaaaaa;
                 border: 2px solid black;
                 margin: 0 auto;
+                position: relative;
+
             }
         </style>
     </head>
     <body>
-        <div class="vbox">
-            <p>Video</p>
-            <video></video>
-        </div>
+        <center>
+            <div class="vbox">
+                <center> <p> Webcam Check </p> </center>
+                <video id="vid" autoplay="true">Video not supported</video>
+            </div>
+        </center>
         
-        <script>
-            window.onload = function(){
-                var constraints = {audio:true, video: true};
-                navigator.mediaDevices.getUserMedia(constraints).then(function(){
-                    var vid = document.querySelector('video');
-                    vid.srcObject = MediaStream;
-                    vid.play(); 
-                }).catch(function(err){
-                    console.log("Error encountered" + err.message);
-                });
+        <script type="text/javascript">
+            navigator.getUserMedia = navigator.getUserMedia || navigator.webKitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || 
+            navigator.oGetUserMedia;
+    
+            if(navigator.getUserMedia){
+                navigator.getUserMedia({video:true}, handleVideo, videoError);
             }
+
+            function handleVideo(stream){
+                document.querySelector('#vid').src = window.URL.createObjectURL(stream);
+            }
+    
+            function videoError(){
+                alert('There is some problem');
+            }    
         </script>
+
     </body>
 </html>
