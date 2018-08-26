@@ -4,7 +4,34 @@
         <meta charset="utf-8"/>
         <title>ColorOnVoice</title> 
     </head>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
     <body>
-        <h1>Color Change On Voice</h1>
+        <div>
+            <center><h1>Color Change On Voice</h1></center>
+
+            <br/><br/>
+            <center><h3>Voice Input</h3></center>
+            <center>
+            <div id="vin" class="box">
+                Voice Input Text 
+            </div>
+            </center>
+            <br/><br/>
+            
+            <center><button id="state" class="button" onclick="convert()" value="Start" type="button"><span style="color:green">Start</span></button>
+            </center>
+            <!--<center><button id="voice" class="voice" type="button" onclick="convert()">V</button></center>-->
+            <br/><br/>
+            
+            <!--<div class="animation">
+                <div id="bar" class="bar"></div>
+            </div>-->
+            <h2 align="center">Color</h2>
+            
+            <center><div id="cbox" class="cbox"></div></center>    
+            <br/><br/>
+            
+            <script src="index.js"></script>
+        </div>    
     </body>
 </html>
